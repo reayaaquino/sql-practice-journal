@@ -11,7 +11,7 @@ Key Takeaways:
 - Grouped by both month and product_id so each product gets its own monthly average
 - Wrapped AVG() inside ROUND(..., 2) to cap results at 2 decimal places
 - Initially used a CTE to make the month column, but dropped it since it adds unnecessary overhead for a basic query.
-  Switched to repeating EXTRACT in GROUP BY, and used the mth alias in ORDER BY since SELECT builds the final table (and creates the aliases) before ORDER BY runs.
+  Switched to repeating EXTRACT in GROUP BY, and used the mth alias in ORDER BY since SELECT builds the final table (and creates the aliases) before ORDER BY runs
 */
 
 SELECT 
