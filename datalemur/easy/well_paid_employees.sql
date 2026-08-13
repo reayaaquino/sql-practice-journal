@@ -7,9 +7,9 @@ Problem Summary:
 Finds employees who earn a higher salary than their direct managers.
 
 Key Takeaways:
--Used a self-join to connect the employee table to itself for the first time.
--By joining the table on the manager ID, I lined up the employee and manager salaries side by side so I could use a simple greater-than comparison.
--I was confused at first because I didn't know you could reuse the same table in a query. I realized I could just use short table aliases (e and m) without typing AS to treat it like two separate tables and keep the code easy to read.
+-Used a self-join to connect the employee table to itself for the first time
+-By joining the table on the manager ID, I lined up the employee and manager salaries side by side so I could use a simple greater-than comparison
+-I was confused at first because I didn't know you could reuse the same table in a query. I realized I could just use short table aliases (e and m) without typing AS to treat it like two separate tables and keep the code easy to read
 */
 
 SELECT
