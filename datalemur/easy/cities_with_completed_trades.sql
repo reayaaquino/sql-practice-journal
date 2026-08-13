@@ -1,15 +1,15 @@
--- Problem: Cities With Completed Trades
+-- Problem: Average Review Ratings
 -- Platform: DataLemur (Easy)
 -- Date: 2026-08-06
 
 /*
 Problem Summary:
-Found the top 3 cities with the highest number of completed trade orders, sorted from highest to lowest.
+Calculated the average star rating for each product by month and rounded the final result to 2 decimal places
 
 Key Takeaways:
-- Used an `INNER JOIN` with table aliases (`t` for trades and `u` for users) to bring city names into the trades table without cluttering column references
-- Grouped the results by `u.city` so `COUNT(*)` could aggregate total trades for each city, then used `ORDER BY` and `LIMIT 3` to grab just the top results
-- I made sure to place the `WHERE t.status = 'Completed'` filter before the `GROUP BY` clause so the query only counts finished orders instead of all activity
+-Used EXTRACT(MONTH FROM submit_date) to pull the month out of the full timestamp so I could group the data
+-Grouped by both the extracted month and product_id so each product gets its own separate monthly average rating
+-I started with a CTE to extract the month first, but realized it added extra code for a simple query. I dropped it and repeated EXTRACT in the GROUP BY, then used the mth alias in ORDER BY since ORDER BY runs after SELECT creates the aliases
 */
 
 SELECT 
