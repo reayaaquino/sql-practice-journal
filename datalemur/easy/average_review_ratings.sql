@@ -4,7 +4,7 @@
 
 /*
 Problem Summary:
-Calculate the average star rating for each product per month, rounded to 2 decimal places.
+Calculate the average star rating for each product per month, rounded to 2 decimal places
 
 Key Takeaways:
 - Used EXTRACT(MONTH FROM submit_date) to pull the month number from the timestamp
