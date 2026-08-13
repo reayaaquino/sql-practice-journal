@@ -27,4 +27,4 @@ GROUP BY app_id
 SELECT
   app_id,
   ROUND(100.0 * click_count/impression_count,2) AS ctr
-FROM event_cte
+FROM event_cte;
