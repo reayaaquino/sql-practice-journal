@@ -4,12 +4,12 @@
 
 /*
 Problem Summary:
-Retrieve the top 3 cities with the highest number of completed orders in descending order.
+Found the top 3 cities with the highest number of completed trade orders, sorted from highest to lowest.
 
 Key Takeaways:
-- Used table aliases (trades t, users u) to keep column prefixes clean and prevent ambiguous column reference errors
-- GROUP BY u.city collapses the dataset down to 1 row per city, then COUNT(*) aggregates the total orders
-- Must filter WHERE t.status = 'Completed' before grouping
+- Used an `INNER JOIN` with table aliases (`t` for trades and `u` for users) to bring city names into the trades table without cluttering column references
+- Grouped the results by `u.city` so `COUNT(*)` could aggregate total trades for each city, then used `ORDER BY` and `LIMIT 3` to grab just the top results
+- I made sure to place the `WHERE t.status = 'Completed'` filter before the `GROUP BY` clause so the query only counts finished orders instead of all activity
 */
 
 SELECT 
