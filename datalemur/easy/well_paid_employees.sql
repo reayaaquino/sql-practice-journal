@@ -4,7 +4,7 @@
 
 /*
 Problem Summary:
-Finds employees who earn a higher salary than their direct managers.
+Finds employees who earn a higher salary than their direct managers
 
 Key Takeaways:
 -Used a self-join to connect the employee table to itself for the first time
